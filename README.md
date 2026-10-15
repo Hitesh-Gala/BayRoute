@@ -83,6 +83,8 @@ All interviewee content is in `assets/js/data.js`. Each person looks like this:
 
 Tall (portrait) images about 1200 × 1800 px work best. File names are case-sensitive on GitHub: `takshashila.jpg`, not `Takshashila.JPG`.
 
+**Home-page backdrop.** The home page sits on a montage of three photos in `assets/img/bg/`: `powai-night.jpg` (left), `taxila.jpg` (centre, feathered into the others) and `powai-lake.jpg` (right). On phones they stack top to bottom. To swap one, upload a landscape JPG (about 1800 px wide, under 500 KB) with the same name. The photos are CC BY-SA from Wikimedia Commons, so keep the credit line in the footer of `index.html` up to date.
+
 ## Before going public
 
 - Every page carries a `noindex` tag so search engines ignore the draft. When you are ready, delete the line `<meta name="robots" content="noindex, nofollow">` from `index.html`, `interviewees.html` and `person.html`.

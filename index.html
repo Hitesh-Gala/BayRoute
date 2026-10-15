@@ -16,10 +16,15 @@
 <body data-page="home">
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Page backdrop: Powai Lake at night, the Dharmarajika Stupa at Taxila, Powai Lake by day. Credits in the footer. -->
+  <div class="page-bg" aria-hidden="true">
+    <span class="bg-1"></span><span class="bg-2"></span><span class="bg-3"></span>
+  </div>
+
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html" aria-label="BayRoute home">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26C6 15 12 8 25 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10 25C11 18 15 13 22 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1.5 3"/><circle cx="25" cy="7" r="2.6" fill="#7A5E2B"/></svg>
+        <img src="assets/img/logo.svg" alt="" width="36" height="36">
         BayRoute
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
@@ -117,25 +122,14 @@
           <h2 id="team-h">The people behind BayRoute</h2>
           <p class="section-intro">The study is led from Takshashila Institution, with partners from India's drone industry.</p>
         </div>
-        <div class="team">
-          <div class="team-org-1">
-            <h3 class="team-org">Takshashila Institution</h3>
-            <ul>
-              <li>Nitin Pai</li>
-              <li>Aditya Ramanathan</li>
-              <li>Brig Anil Raman</li>
-              <li>Wg Cdr HD Gala</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="team-org">ideaForge</h3>
-            <ul><li>Ankit Mehta</li></ul>
-          </div>
-          <div>
-            <h3 class="team-org">Drone Federation India</h3>
-            <ul><li>Smit Shah</li></ul>
-          </div>
-        </div>
+        <ul class="team">
+          <li class="member member--takshashila"><span class="member-name">Nitin Pai</span><span class="member-org">Takshashila Institution</span></li>
+          <li class="member member--takshashila"><span class="member-name">Aditya Ramanathan</span><span class="member-org">Takshashila Institution</span></li>
+          <li class="member member--takshashila"><span class="member-name">Brig Anil Raman</span><span class="member-org">Takshashila Institution</span></li>
+          <li class="member member--takshashila"><span class="member-name">Wg Cdr HD Gala</span><span class="member-org">Takshashila Institution</span></li>
+          <li class="member member--ideaforge"><span class="member-name">Ankit Mehta</span><span class="member-org">ideaForge</span></li>
+          <li class="member member--dfi"><span class="member-name">Smit Shah</span><span class="member-org">Drone Federation India</span></li>
+        </ul>
       </div>
     </section>
 
@@ -154,6 +148,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>Project BayRoute is a Takshashila Institution study, in collaboration with ideaForge and Drone Federation India. © 2026</p>
+      <p class="photo-credits">Background photos via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Hiranandani_Gardens,_Powai_skyline.JPG" target="_blank" rel="noopener">Powai skyline</a> by AKS.9955 (CC BY-SA 4.0); <a href="https://commons.wikimedia.org/wiki/File:Dharmarajika_stupa,Taxila.jpg" target="_blank" rel="noopener">Dharmarajika Stupa, Taxila</a> by Sasha Isachenko (CC BY-SA 3.0); <a href="https://commons.wikimedia.org/wiki/File:Powai_lake_hiranandani.jpg" target="_blank" rel="noopener">Powai Lake</a> by Shishirdasika (CC BY-SA 4.0).</p>
       <nav aria-label="Footer">
         <a href="#about">About</a>
         <a href="interviewees.html">Interviewees</a>
