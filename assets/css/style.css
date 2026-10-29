@@ -234,6 +234,78 @@ p { margin: 0 0 1em; }
 .steps h3 { font-size: 1.5rem; margin-bottom: 4px; }
 .steps p { margin: 0; color: var(--ink-2); max-width: 56ch; font-size: 1.15rem; }
 
+/* small label above each home-page section heading */
+.eyebrow { font: 600 .95rem/1.2 var(--text); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+
+/* hero: the study at a glance */
+.hero-facts {
+  list-style: none; padding: 0; margin: clamp(28px, 4vw, 48px) 0 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(20px, 4vw, 56px);
+}
+.hero-facts li { border-top: 1px solid rgba(255,255,255,.45); padding-top: 14px; }
+.fact-value { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.1; }
+.fact-label { display: block; margin-top: 4px; font-size: 1.05rem; }
+@media (max-width: 760px) {
+  .hero-facts { grid-template-columns: 1fr; }
+  .hero-facts li { display: flex; align-items: baseline; gap: 12px; padding: 10px 0; }
+  .fact-value { flex: none; min-width: 6.2em; font-size: 1.45rem; }
+  .fact-label { margin: 0; font-size: 1rem; }
+}
+
+/* rationale: cost of dependence vs what sovereignty provides */
+.contrast { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); margin-top: clamp(32px, 4vw, 52px); }
+.contrast-card { background: #fff; border: 1px solid var(--rule); border-top: 5px solid var(--tone); padding: clamp(22px, 3vw, 34px); }
+.contrast-card--cost { --tone: #8C3B2B; }
+.contrast-card--gain { --tone: #2E6F73; }
+.contrast-card h3 { font-size: clamp(1.4rem, 2vw, 1.7rem); margin-bottom: 10px; }
+.contrast-card ul { list-style: none; padding: 0; margin: 0; }
+.contrast-card li { position: relative; padding: 14px 0 14px 28px; border-top: 1px solid var(--rule); font-size: 1.15rem; line-height: 1.5; }
+.contrast-card li::before { content: ""; position: absolute; left: 2px; top: 1.15em; width: 10px; height: 10px; background: var(--tone); }
+@media (max-width: 760px) { .contrast { grid-template-columns: 1fr; } }
+
+/* project: the first-principles chain */
+.chain {
+  list-style: none; padding: 0; margin: clamp(40px, 5vw, 64px) 0 0; position: relative;
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px);
+}
+.chain::before { content: ""; position: absolute; left: 10%; right: 10%; top: 23px; height: 2px; background: var(--brass); }
+.chain li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.chain-n {
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; z-index: 1;
+  background: var(--night); color: #fff; font: 600 1.3rem/1 var(--display); box-shadow: 0 0 0 6px var(--paper);
+}
+.chain h3 { font-size: 1.3rem; margin: 16px 0 6px; }
+.chain p { margin: 0; color: var(--ink-2); font-size: 1.06rem; line-height: 1.5; }
+.chain li:last-child .chain-n { background: var(--brass); }
+@media (max-width: 1000px) {
+  .chain { grid-template-columns: 1fr; gap: 0; }
+  .chain::before { display: none; }
+  .chain li:not(:last-child)::before { content: ""; position: absolute; left: 23px; top: 48px; bottom: 0; width: 2px; background: var(--brass); }
+  .chain li { display: grid; grid-template-columns: 48px 1fr; gap: 0 18px; align-items: start; text-align: left; padding-bottom: 24px; }
+  .chain li:last-child { padding-bottom: 0; }
+  .chain-n { grid-row: span 2; }
+  .chain h3 { margin: 10px 0 4px; }
+}
+.project-notes { margin-top: clamp(32px, 4vw, 56px); }
+.aside-note--first { margin-top: 0; }
+
+/* key questions */
+.kq { list-style: none; padding: 0; margin: clamp(32px, 4vw, 52px) 0 0; counter-reset: kq; }
+.kq li {
+  counter-increment: kq;
+  display: grid; grid-template-columns: 4.5rem minmax(0, 17rem) minmax(0, 1fr); gap: 0 clamp(16px, 3vw, 40px);
+  padding: clamp(22px, 3vw, 32px) 0; border-top: 1px solid var(--rule);
+}
+.kq li:last-child { border-bottom: 1px solid var(--rule); }
+.kq li::before { content: counter(kq, decimal-leading-zero); font: 500 clamp(2.2rem, 3.4vw, 3rem)/1 var(--display); color: var(--brass); }
+.kq h3 { font-size: clamp(1.4rem, 2vw, 1.65rem); padding-top: 4px; }
+.kq p { margin: 0; font-size: 1.2rem; line-height: 1.55; color: var(--ink); max-width: 64ch; }
+@media (max-width: 860px) {
+  .kq li { grid-template-columns: 3.6rem 1fr; }
+  .kq li::before { grid-row: span 2; }
+  .kq h3 { margin-bottom: 8px; padding-top: 2px; }
+}
+
 /* team: six equal cards, so every name gets the same weight */
 .team {
   list-style: none; padding: 0; margin: clamp(32px, 4vw, 48px) 0 0;

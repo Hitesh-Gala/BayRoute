@@ -1,6 +1,6 @@
 # Project BayRoute — website
 
-A static website for Project BayRoute, a Takshashila Institution study (with ideaForge and Drone Federation India) on the future of warfare in the Indian context. No build tools, no database: plain HTML, CSS and JavaScript that GitHub Pages can host for free.
+A static website for Project BayRoute, a Takshashila Institution study (with ideaForge and Drone Federation India) towards a sovereign defence roadmap: the defence capabilities India must be able to design, develop, own and manufacture by 2031. No build tools, no database: plain HTML, CSS and JavaScript that GitHub Pages can host for free.
 
 ## What is in this folder
 
